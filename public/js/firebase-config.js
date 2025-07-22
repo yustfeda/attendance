@@ -7,7 +7,7 @@ const firebaseConfig = {
     projectId: "absen-609f6",
     storageBucket: "absen-609f6.firebasestorage.app",
     messagingSenderId: "821457920522",
-    appId: "1:821457920522:web:8a53e59a31a02d4a0a75f3"
+    appId: ""
 };
 
 // Inisialisasi Firebase
