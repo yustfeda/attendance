@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekap Absen - ABSENSI SISWA FILIAL SMPN 2 CILELES</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+    <header class="main-header">
+        <h1>ABSENSI SISWA FILIAL SMPN 2 CILELES</h1>
+        <nav>
+            <a href="absensi.html" class="nav-item">Absensi</a>
+            <a href="rekap.html" class="nav-item active">Rekap Absen</a>
+            <button id="logoutBtn" class="nav-item logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <main class="rekap-container">
+        <h2 id="rekapTitle">Rekap Absensi Siswa</h2>
+
+        <div class="class-selection">
+            <label for="rekapClassSelect">Pilih Kelas:</label>
+            <select id="rekapClassSelect">
+                <option value="7">Kelas 7</option>
+                <option value="8">Kelas 8</option>
+                <option value="9">Kelas 9</option>
+            </select>
+            <button id="downloadRekapBtn" class="btn-secondary">Unduh Rekap PDF</button>
+        </div>
+
+        <div class="table-responsive">
+            <table id="rekapTable">
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Nama Siswa</th>
+                        <th>Keterangan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script> <script src="js/rekap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.min.js"></script>
+</body>
+</html>

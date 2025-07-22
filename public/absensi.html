@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Siswa - ABSENSI SISWA FILIAL SMPN 2 CILELES</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+    <header class="main-header">
+        <h1>ABSENSI SISWA FILIAL SMPN 2 CILELES</h1>
+        <nav>
+            <a href="absensi.html" class="nav-item active">Absensi</a>
+            <a href="rekap.html" class="nav-item">Rekap Absen</a>
+            <button id="logoutBtn" class="nav-item logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <main class="absensi-container">
+        <h2 id="absensiTitle">Absensi Siswa</h2>
+
+        <div class="class-selection">
+            <label for="classSelect">Pilih Kelas:</label>
+            <select id="classSelect">
+                <option value="7">Kelas 7</option>
+                <option value="8">Kelas 8</option>
+                <option value="9">Kelas 9</option>
+            </select>
+            <button id="addStudentBtn" class="btn-secondary">Tambah Siswa Baru</button>
+        </div>
+
+        <div class="date-display">
+            Tanggal: <span id="currentDate"></span>
+        </div>
+
+        <div class="table-responsive">
+            <table id="absensiTable">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Nama Siswa</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="action-buttons">
+            <button id="saveAbsensiBtn" class="btn-primary">Simpan Absensi</button>
+            <button id="downloadAbsensiBtn" class="btn-secondary">Unduh Absen</button>
+        </div>
+    </main>
+
+    <div id="addStudentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Tambah Siswa Baru</h3>
+            <div class="form-group">
+                <label for="newStudentName">Nama Siswa:</label>
+                <input type="text" id="newStudentName" required>
+            </div>
+            <button id="submitNewStudent" class="btn-primary">Tambahkan</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script> <script src="js/absensi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.min.js"></script>
+
+</body>
+</html>
